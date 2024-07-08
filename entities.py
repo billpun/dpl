@@ -94,13 +94,15 @@ class Channel(Base):
     def __repr__(self):
         return f'h_{self.channel_id}'
 
-# !!!!! could be duplicated
+# ! could be duplicated depending on what marketing spend actually is
 class Campaign(Base):
 
     __tablename__ = 'campaigns'
 
     campaign_id: Mapped[str] = mapped_column(primary_key=True)
     campaign_name: Mapped[str] = mapped_column(default='')
+
+    # ! may need additional attribution for similarity
 
     def __repr__(self):
         return f'c_{self.campaign_id}'
@@ -112,6 +114,8 @@ class Visitor(Base):
     visitor_id: Mapped[str] = mapped_column(primary_key=True)
     customer_id: Mapped[str] = mapped_column(ForeignKey('customers.customer_id'), nullable=True)
 
+    # ! need additional attribution for similarity
+    
     def __repr__(self):
         return f'v_{self.visitor_id}'
 
@@ -120,6 +124,8 @@ class Customer(Base):
     __tablename__ = 'customers'
 
     customer_id: Mapped[str] = mapped_column(primary_key=True)
+
+    # ! need additional attribution for similarity
 
     def __repr__(self):
         return f'u_{self.customer_id}'
