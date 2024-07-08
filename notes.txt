@@ -1,0 +1,3 @@
+# 2024-07-08
+- go over the entities.py
+- ask what to simulate
