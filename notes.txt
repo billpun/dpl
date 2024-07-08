@@ -1,3 +1,5 @@
 # 2024-07-08
+- [Digital Channels] what does it mean by "We have this information in a monthly level"?
+- [Digital Channels] if cus_value is only available once he/she applied, how can be know if we are sending the best offer?
 - go over the entities.py
 - ask what to simulate

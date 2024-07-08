@@ -59,9 +59,11 @@ class TargetPopulation(Base):
     conv_prob: Mapped[float] = mapped_column(default=0.0) # hard pull
     cus_value: Mapped[float] = mapped_column(default=0.0) # null for prospect?
 
+    # ! this is great for simulation (but could be huge)
     eligibility_flag: Mapped[bool] = mapped_column(default=False)
-    expected_approval_rate: Mapped[float] = mapped_column(default=0.0)
 
+    # what is this?
+    expected_approval_rate: Mapped[float] = mapped_column(default=0.0)
 
     def __repr__(self):
         return f'tp_{self.visitor_id}_{self.spend_id}'
