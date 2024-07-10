@@ -3,3 +3,32 @@
 - [Digital Channels] if cus_value is only available once he/she applied, how can be know if we are sending the best offer?
 - go over the entities.py
 - ask what to simulate
+	- come up with a performance measuring framework
+		- how accurate are the probabilities
+		- will not question how accurate about the cus_value and cost
+	- how far were we and why
+	- what could we do to simulate
+
+- what does target population include?
+
+# 2024-07-10
+- non-solicit: target without an offer id (target population)
+- solicit: target with an offer id (target population)
+- customer can be card/non-card member
+	in each group, they can be solicit or non-solicit
+		this provides 4 segments
+- reengaging - customer with an active DPL (customer-products can take care of this)
+- resoliciting - customer with a paid-off DPL (customer-products can take care of this)
+	this provides 8 segments
+
+segments
+card-member
+	reengaging
+		solicit (1)
+		non-solicit (2)
+	resoliciting
+		solicit (3)
+		non-solicit (4)
+non card-member
+	solicit (5)
+	non-solicit (6)
