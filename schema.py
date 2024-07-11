@@ -14,8 +14,8 @@ import sqlalchemy
 from sqlalchemy import MetaData
 from eralchemy import render_er
 
-engine = sqlalchemy.create_engine('sqlite:///demo.db', echo=False)
+engine = sqlalchemy.create_engine('sqlite:///demo_ana.db', echo=False)
 metadata = MetaData()
 metadata.reflect(bind=engine)
 
-render_er(metadata, 'schema.png')
+render_er(metadata, 'schema_ana.png')

@@ -9,7 +9,7 @@ SUBMISSION_PROB = 0.05
 APPROVE_REJECT_PROB = 0.5
 CANCEL_PROB = 0.1
 
-db = SQLite('demo.db', create=True, renew=True, read_only=False)
+db = SQLite('demo.db', Base, create=True, renew=True, read_only=False)
 db.connect()
 
 NUM_VISITORS = 10

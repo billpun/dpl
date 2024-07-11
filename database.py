@@ -5,8 +5,6 @@ from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 import time
 
-from entities import Base
-
 @event.listens_for(Engine, 'connect')
 def set_sqlite_pragma(cn, _):
 	cursor = cn.cursor()
@@ -31,13 +29,13 @@ class SQLite:
 				if os.path.exists(db_path + postfix):
 					os.remove(db_path + postfix)
 
-	def connect(self):
+	def connect(self, base):
 		cnstring = f'sqlite:///{self.db_path}'
 		if self.read_only:
 			cnstring == '?mode=ro'
 		self.engine = sqlalchemy.create_engine(cnstring, echo=False)
 		if self.create:
-			Base.metadata.create_all(self.engine)
+			base.metadata.create_all(self.engine)
 		Session = sessionmaker(bind=self.engine)
 		self.session = Session()
 		print(f'successfully connected to {self.db_path}.')
