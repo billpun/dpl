@@ -114,6 +114,8 @@ class Offer(Base):
 
     offer_id: Mapped[str] = mapped_column(primary_key=True)
     channel_id: Mapped[str] = mapped_column(ForeignKey('channels.channel_id'))
+    headline_price_lb: Mapped[float] = mapped_column()
+    headline_price_ub: Mapped[float] = mapped_column()
     start_dt: Mapped[date] = mapped_column()
     end_dt: Mapped[date] = mapped_column()
 
@@ -172,7 +174,7 @@ class ResponderHistory(Base):
 class Application(Base):
 
     __tablename__ = 'applications'
-    
+
     application_id: Mapped[str] = mapped_column(primary_key=True)
     visitor_key: Mapped[int] = mapped_column(ForeignKey('visitors.visitor_key'))
     campaign_id: Mapped[str] = mapped_column(ForeignKey('campaigns.campaign_id'))
