@@ -32,3 +32,15 @@ card-member
 non card-member
 	solicit (5)
 	non-solicit (6)
+
+[2024-07-11]
+- can a card member have multiple email address?
+- do we have eligibility for DPL customers?
+- can a customer receive multiple offer id in a week given the same channel?
+- offer eligibilities missing respond/conversion/ltv?
+- should channel id be removed from offer eligibilities?
+- in the history tables, what is perf_month?
+- should creative id be in the offers/campaigns tables?
+- is offer id unique in a region?
+- respond history missing offer/campaign ids?
+- spend table missing spend?

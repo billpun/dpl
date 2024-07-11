@@ -169,6 +169,8 @@ class Application(Base):
     updated_dt: Mapped[datetime] = mapped_column(primary_key=True)
     status: Mapped[str] = mapped_column()
     visitor_key: Mapped[int] = mapped_column(ForeignKey('visitors.visitor_key'))
+    campaign_id: Mapped[str] = mapped_column(ForeignKey('campaigns.campaign_id'))
+    offer_id: Mapped[str] = mapped_column(ForeignKey('offers.offer_id'))
 
 class MarketSpendHistory(Base):
 
