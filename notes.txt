@@ -23,10 +23,10 @@
 
 segments
 card-member
-	reengaging
+	DPL: reengaging
 		solicit (1)
 		non-solicit (2)
-	resoliciting
+	DPL: resoliciting
 		solicit (3)
 		non-solicit (4)
 non card-member
@@ -38,7 +38,6 @@ non card-member
 - do we have eligibility for DPL customers?
 - can a customer receive multiple offer id in a week given the same channel?
 - offer eligibilities missing respond/conversion/ltv?
-- should channel id be removed from offer eligibilities?
 - in the history tables, what is perf_month?
 - should creative id be in the offers/campaigns tables?
 - is offer id unique in a region?
