@@ -12,6 +12,7 @@ import utils
 # why no click in any communication history table?
 # why campaign and channel go together?
 # inconsistent datatype for id (mstr_apln_id)
+# is there a table to tie visitor to cardmember or DPL customer?
 # difficult for onmichannel view
 
 class Base(DeclarativeBase):
@@ -24,7 +25,6 @@ class Base(DeclarativeBase):
 
 class RiskEligibilityHistory(Base):
 
-    # history or future?
     __tablename__ = 'risk_eligibility_history'
 
     # how about eligibility for DPL customers?
