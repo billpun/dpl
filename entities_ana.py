@@ -12,6 +12,7 @@ import utils
 # why no click in any communication history table?
 # why campaign and channel go together?
 # inconsistent datatype for id (mstr_apln_id)
+# difficult for onmichannel view
 
 class Base(DeclarativeBase):
     
